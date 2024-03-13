@@ -1,0 +1,86 @@
+<!doctype html>
+ <html>
+  <head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width,initial-scale=1.0">
+   <title> getelement </title>
+   
+   <style> 
+    #backcolor 
+	{
+	  margin:auto;
+	  width:50%;
+	  padding:40px;
+	}
+	p 
+	{
+	  padding-left:15px;
+	}
+	button 
+	{
+	  padding:10px;
+	  background-color:white;
+	  color:dodgerblue;
+	  font-size:20px;
+	  margin-left:230px;
+	  border:3px solid red;
+	}
+   </style>
+   
+  </head>
+  <body>
+  
+  <!--- Random Background Color --->
+  
+   <section id="backcolor">
+    <h1> JAVASCRIPT </h1>
+    <p> 
+     JavaScript is the world's most popular programming language.JavaScript is the programming language of the Web.
+     JavaScript is easy to learn.
+    </p>
+    <h1> HTML </h1>
+    <p> 
+      HTML is the standard markup language for Web pages.With HTML you can create your own Website.
+      HTML is easy to learn.
+    </p>
+    <h1> CSS </h1>
+    <p>
+      CSS is the language we use to style an HTML document.CSS describes how HTML elements should be displayed.
+    </p>
+	<h1> REACT </h1>
+    <p>
+       React is a JavaScript library for building user interfaces.React is used to build single-page applications.
+       React allows us to create reusable UI components.
+    </p> <br>
+   <button onclick="colbut()"> Click Me  </button> 
+
+  <!--- js --->
+  
+   <script>
+   
+    let colbut=()=>
+    {
+      let l1=document.getElementById("backcolor");
+      l1.style.backgroundColor="bisque";
+      let c=document.getElementsByTagName("h1");
+	  for(let i=0;i<c.length;i++)
+	  {
+	    c[i].style.color = "red";
+	  }
+	  let p=document.getElementsByTagName("p");
+	  for(let j=0;j<p.length;j++)
+	  {
+	    let r=Math.random()*256;
+		r=Math.round(r);
+		let g=Math.random()*256;
+		g=Math.round(g);
+		let b=Math.random()*256;
+		b=Math.round(b);
+	    p[j].style.color="rgb(" + r + ", " + g + ", " + b + ")";	
+	  }
+    }
+	
+   </script>
+   </section>
+  </body>
+</html>  
